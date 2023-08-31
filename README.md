@@ -2,7 +2,8 @@
 
 Uni-connect is a full-stack web application designed to connect students with each other. It provides a platform for students to connect based on their interests, courses, and other relevant factors, fostering collaboration and networking within the student community.
 
-![Uni-connect Screenshot](screenshot.png) <!-- Replace with an actual screenshot of your app -->
+![Uni-connect Screenshot](https://github.com/obi-sammy/uni-connect-app/assets/97705087/602253e6-3b33-4a28-a769-fc314dc20ecd)
+
 
 ## Features
 
@@ -30,7 +31,8 @@ Uni-connect is a full-stack web application designed to connect students with ea
 
 ## Usage
 
-- Visit the deployed app at [https://uni-connect-app.herokuapp.com/](https://uni-connect-app.herokuapp.com/)
+- Visit the deployed app at [https://uni-connect-app.com/](https://dull-jade-clam-sock.cyclic.app
+)
 - Register a new account or log in with existing credentials.
 - Create and customize your profile.
 - Search for other students and connect with them.
