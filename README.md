@@ -39,12 +39,18 @@ Uni-connect is a full-stack web application designed to connect students with ea
 
 While Uni-connect provides valuable features for connecting students, there are several areas where the application could be improved:
 
-1. **Enhanced Matching Algorithm:** Develop a more sophisticated algorithm for suggesting potential connections based on shared interests, courses, and other factors.
-2. **Notifications:** Implement a notification system to alert users about new messages, connection requests, and updates to their connections.
-3. **User Experience:** Continuously refine the user interface and user experience to ensure intuitive navigation and engagement.
-4. **Performance Optimization:** Optimize the application's performance, especially when dealing with a large number of users and messages.
-5. **Privacy Controls:** Add options for users to control the visibility of their profiles and personal information.
-
+- [ ] Make app responsive on all screen sizes.
+- [ ] Make the search field functional.
+- [ ] Add googleAuth and make the forgort password functional.
+- [ ] Add a message when there is no todo present on initial render.
+- [ ] Add checked attribute to completed tasks.
+- [ ] Add a delete button on the todo items.
+- [ ] Handle the frontend using React.
+- [ ] Refactor code.
+- [ ] Add comments where necessary.
+- [ ] Add the user's social media accounts in his/her profile so other users can connect with them.
+- [ ] Make it possible to delete notifications and add the date to the notification.
+- [ ] Add a feature where user can accept and reject connections.
 ## Contributing
 
 Contributions are welcome! If you have any ideas for new features, improvements, or bug fixes, please feel free to submit a pull request or open an issue.
