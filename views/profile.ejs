@@ -1,0 +1,70 @@
+<%- include('partials/header') -%>
+
+<main class="profile-main layout-for-feed-and-profile">
+  <section class="profile-picture-section" 
+  <% if (userDetails.profilePicture.length > 0) { %>
+    style="background-image: url('<%= userDetails.profilePicture %>');"
+  <% } else { %>
+    style="background-image: url('/img/blank-profile-picture-973460_640.png');"
+  <% } %>
+  >
+    <div class="profile-picture-text">
+        <h2><%= userDetails.lastName %> <%= userDetails.firstName %></h2>
+        <p><%= userDetails.department %></p>
+    </div>
+  </section>
+
+  <section class="profile-about-section">
+    <div class="profile-about-container
+    profile-content-container">
+        <div class="profile-caption-container">
+            <p><%= userDetails.caption %></p>
+        </div>
+
+        <div class="profile-hobbies-container">
+            <h3>Hobbies</h3>
+            <p>
+              <% if (userDetails.hobbies) { %>
+                <%= userDetails.hobbies.join(',') %>
+              <% } else { %>
+                No hobbies yet
+              <% } %>
+            </p>
+        </div>
+
+        <div class="profile-skills-container">
+            <h3>Skills</h3>
+            <p>
+              <% if (userDetails.skills) { %>
+                <%= userDetails.skills.join(',') %>
+              <% } else { %>
+                No skills yet
+              <% } %>
+            </p>
+        </div>
+    </div>
+  </section>
+
+  <section class="profile-connection-container profile-content-container">
+    <div class="profile-connection-text-container">
+      <h3>Your Connections</h3>
+    </div>
+
+    <% connectionUserDetails.forEach(user => { %>
+      <a href="/profile/<%= user._id %>">
+        <div class="profile-connection-people">
+          <img
+          <% if (user.profilePicture.length > 0) { %>
+            src="<%= user.profilePicture %>"
+          <% } else { %>
+            src="/img/blank-profile-picture-973460_640.png"
+          <% } %>
+            alt="Connection Profile Picture">
+          <p><%= user.lastName %> <%= user.firstName %></p>
+        </div>
+      </a>
+    <% }); %>
+  </section>
+</main>
+
+<%- include('partials/footer') -%>

@@ -1,0 +1,41 @@
+<%- include('partials/header') -%>
+<main class="feed-main layout-for-feed-and-profile">
+    <% if (feedUsers.length) { %>
+         <% feedUsers.forEach( user => { %>
+            <a href="/profile/<%= user._id %>">
+                <section class="feed-people-container">
+                    <div class="feed-people-image-container">
+                        <img  
+                        <% if (user.profilePicture.length > 0) { %>
+                            src="<%= user.profilePicture %>"
+                        <% } else { %>
+                            src="/img/blank-profile-picture-973460_640.png"
+                        <% } %>
+                        alt="Profile Picture">
+                    </div>
+
+                    <div class="feed-people-text-container">
+                        <div class="feed-people-text">
+                            <h2 class="feed-people-name"><%= user.lastName %> <%= user.firstName %></h2>
+                            <p class="feed-people-department"><%= user.department %></p>
+                            <p><%= user.hobbies %></p>
+                            <p><%= user.skills %></p>
+                        </div>
+                        <div class="feed-people-button-container">
+                            <form action="/connect/<%= user._id %>?_method=PUT" method="POST">
+                                <button type="submit">Connect</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </a>
+        <% }) %>  
+    <% } else { %>
+        <div class="dummy-container">
+            <i class="fa-solid fa-magnifying-glass dummy-icon"></i>
+            <p class="dummy-text">No user to connect with</p>
+        </div>
+    <% } %>
+</main>
+
+<%- include('partials/footer') -%>

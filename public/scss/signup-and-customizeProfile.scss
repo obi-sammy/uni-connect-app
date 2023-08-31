@@ -1,0 +1,90 @@
+@import 'config';
+
+body {
+    background-color: $Gray;
+}
+
+header {
+    @include header;
+    padding-top: 1.2rem;
+
+    .logo-container {
+        font-family: $logo-font-family;
+    }
+}
+
+.main-utility-class {
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    .text-container-utility-class h2 {
+        font-weight: weights(regular);
+    }
+
+    .form-container-utility-class {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 2rem;
+
+        form {
+            @include flex(column);
+
+            gap: 1rem;
+        }
+
+        .input-utility-class {
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid black;
+
+            @include inputField;
+        }
+
+        .button-utility-class {
+            width: 100%;
+            padding: 1.2rem 0;
+            
+            @include bigButton;
+        }
+    }
+}
+
+.signup-main {
+    .signup-input {
+        padding: .7rem;
+        margin-top: .4rem;
+    }
+}
+
+.customizeprofile-main {
+    .customizeprofile-container {
+        margin-bottom: 4rem;
+    }
+
+    .customizeprofile-text-container h2 {
+        font-weight: weights(bold);
+        font-size: 3.7rem;
+    }
+
+    .customizeprofile-text-container span {
+        font-family: $logo-font-family;
+        color: $Primary;
+    }
+
+    .customizeprofile-input,
+    .customizeprofile-textarea {
+        padding: 1rem;
+        margin-top: .6rem;
+    }
+
+    .customizeprofile-textarea {
+        resize: none;
+        height: 6rem;
+    }
+}
+
+.form-text {
+    color: $Primary;
+}

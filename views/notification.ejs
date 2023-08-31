@@ -1,0 +1,22 @@
+<%- include('partials/header') -%>
+
+<main class="notification-main layout-for-feed-and-profile">
+  <div class="notification-welcome-text-container">
+      <h2>Hi <span><%= loggedInUser.firstName %>,</span></h2>
+  </div>
+
+  <% if (notification.length) { %>
+    <% connectedUserDetails.forEach(user => { %>
+      <section class="notification-container">
+        <div class="notification-text-container">
+            <p>You connected with <%= user.lastName %> <%= user.firstName %></p>
+        </div>
+    </section>
+    <% }); %>
+  <% } else { %>
+    No notifications yet
+  <% } %>
+
+  
+
+<%- include('partials/footer') -%>
