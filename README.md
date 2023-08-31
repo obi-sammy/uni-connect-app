@@ -48,7 +48,3 @@ While Uni-connect provides valuable features for connecting students, there are 
 ## Contributing
 
 Contributions are welcome! If you have any ideas for new features, improvements, or bug fixes, please feel free to submit a pull request or open an issue.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
