@@ -6,7 +6,7 @@
                 <section class="feed-people-container">
                     <div class="feed-people-image-container">
                         <img  
-                        <% if (user.profilePicture.length > 0) { %>
+                        <% if (user.profilePicture) { %>
                             src="<%= user.profilePicture %>"
                         <% } else { %>
                             src="/img/blank-profile-picture-973460_640.png"
