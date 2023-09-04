@@ -2,7 +2,7 @@
 
 Uni-connect is a full-stack web application designed to connect students with each other. It provides a platform for students to connect based on their interests, courses, and other relevant factors, fostering collaboration and networking within the student community.
 
-![Uni-connect Screenshot](https://github.com/obi-sammy/uni-connect-app/assets/97705087/602253e6-3b33-4a28-a769-fc314dc20ecd)
+![Uni-code landing page](https://github.com/obi-sammy/uni-connect-app/assets/97705087/51d76848-926c-4aee-98df-b6913fa5e3f6)
 
 
 ## Features
