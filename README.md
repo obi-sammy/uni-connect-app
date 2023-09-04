@@ -44,9 +44,7 @@ While Uni-connect provides valuable features for connecting students, there are 
 - [ ] Make app responsive on all screen sizes.
 - [ ] Make the search field functional.
 - [ ] Add googleAuth and make the forgort password functional.
-- [ ] Add a message when there is no todo present on initial render.
-- [ ] Add checked attribute to completed tasks.
-- [ ] Add a delete button on the todo items.
+- [ ] Protect the '/' route from users already logged in.
 - [ ] Handle the frontend using React.
 - [ ] Refactor code.
 - [ ] Add comments where necessary.
