@@ -25,16 +25,7 @@ body:
 - type: textarea
   attributes:
     label: Actual behaviour?
-    description: "What was expected to happen?"
+    description: "What actually happened?"
   validations:
     required: true
-- type: dropdown
-  id: download
-  attributes:
-    label: Where did you see this issue?
-    options:
-      - Web
-      - Mobile
-      - API request
-  validations:
-    required: true
+
