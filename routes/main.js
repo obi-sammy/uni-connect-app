@@ -4,10 +4,10 @@ const upload = require("../middleware/multer");
 const authController = require("../controllers/auth");
 const homeController = require("../controllers/home");
 const mainController = require("../controllers/main");
-const { ensureAuth } = require("../middleware/auth");
+const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes 
-router.get("/", homeController.getIndex);
+router.get("/", ensureGuest, homeController.getIndex);
 router.get("/profile/:id", ensureAuth, mainController.getProfile);
 router.get("/customizeProfile", ensureAuth, mainController.getCustomizeProfile);
 router.put("/customizeProfile", upload.single("file"), mainController.putCustomizeProfile);
