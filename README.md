@@ -44,7 +44,7 @@ While Uni-connect provides valuable features for connecting students, there are 
 - [ ] Make app responsive on all screen sizes.
 - [ ] Make the search field functional.
 - [ ] Add googleAuth and make the forgort password functional.
-- [ ] Protect the '/' route from users already logged in.
+- [x] Protect the '/' route from users already logged in.
 - [ ] Handle the frontend using React.
 - [ ] Refactor code.
 - [ ] Add comments where necessary.
