@@ -32,7 +32,6 @@ Uni-connect is a full-stack web application designed to connect students with ea
 ## Usage
 
 - Visit the deployed app at [Link to Uni-connect](https://dull-jade-clam-sock.cyclic.app)
-)
 - Register a new account or log in with existing credentials.
 - Create and customize your profile.
 - Search for other students and connect with them.
