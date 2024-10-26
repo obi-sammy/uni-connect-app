@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Orienta&family=Roboto+Condensed:wght@300;400;700&display=swap");
+/* -- Mixin-- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+}
+
+.alert {
+  padding-block: 2rem;
+  margin-bottom: 1rem;
+}
+
+.alert-danger {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  border: 1px solid red;
+  color: red;
+}
+
+.alert-danger {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  border: 1px solid hsl(39, 100%, 75%);
+  color: hsl(39, 100%, 75%);
+}
+
+.header {
+  background-color: hsl(249, 60%, 63%);
+  color: #fff;
+  padding-block: 1rem 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav .header-logo {
+  font-family: "Orienta", sans-serif;
+}
+.nav .header-logo-container,
+.nav .header-icons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3.5rem;
+}
+.nav .header-search-input {
+  width: 15rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  padding: 1rem 3rem 0.7rem 2rem;
+  outline: none;
+  transition: width 0.4s ease-in-out;
+}
+.nav .header-search-input:focus {
+  width: 20rem;
+}
+
+.hamburger-menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+.dropdown-container {
+  position: fixed;
+  top: 6.5rem;
+  left: 0;
+  width: 23rem;
+  height: 100%;
+  overflow-x: hidden;
+  z-index: 1;
+  background-color: hsl(30, 15%, 95%);
+  color: black;
+  font-family: "Orienta", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .dropdown-container {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-container.active {
+    display: block;
+    width: 100%;
+  }
+}
+
+.dropdown-flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25rem;
+}
+@media (max-width: 768px) {
+  .dropdown-flex-container {
+    gap: 18rem;
+    text-align: center;
+    margin-top: 9rem;
+  }
+}
+
+.dropdown-list {
+  display: grid;
+  gap: 3rem;
+  font-size: 2.2rem;
+}
+.dropdown-list a:hover {
+  border-bottom: 2px solid hsl(39, 100%, 75%);
+}
+@media (max-width: 768px) {
+  .dropdown-list {
+    gap: 3.5rem;
+    font-size: 2.7rem;
+  }
+}
+
+.dropdown-logout-button {
+  color: #fff;
+  background-color: hsl(249, 60%, 63%);
+  align-self: center;
+  border-radius: 25px;
+  padding: 1rem 2.5rem;
+  transition: all 0.6s ease;
+}
+.dropdown-logout-button:hover {
+  border: 2px solid hsl(249, 60%, 63%);
+  color: hsl(249, 60%, 63%);
+  background-color: #fff;
+}
+@media (max-width: 768px) {
+  .dropdown-logout-button {
+    padding: 1.5rem 3.5rem;
+  }
+}
+
+.layout-for-feed-and-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 35%;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+@media (max-width: 768px) {
+  .layout-for-feed-and-profile {
+    margin-left: 20%;
+  }
+}
+
+.feed-main .feed-people-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 3rem;
+  max-width: 70%;
+  border-bottom: 2px solid hsl(30, 15%, 95%);
+  padding: 2.5rem 3rem 2rem 0;
+}
+.feed-main .feed-people-image-container img {
+  border-radius: 50%;
+  width: 100%;
+  height: 15rem;
+}
+.feed-main .feed-people-text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.feed-main .feed-people-text p {
+  padding-top: 0.7rem;
+}
+.feed-main .feed-people-name {
+  font-family: "Orienta", sans-serif;
+}
+.feed-main .feed-people-department {
+  color: hsl(249, 60%, 63%);
+}
+.feed-main .feed-people-button-container {
+  align-self: flex-start;
+  padding-top: 2.8rem;
+}
+.feed-main .feed-people-button-container button {
+  padding: 1rem 3rem;
+  border: 1px solid hsl(249, 60%, 63%);
+  color: hsl(249, 60%, 63%);
+  border-radius: 26px;
+}
+.feed-main .feed-people-button-container button:hover {
+  border: 3px solid hsl(249, 60%, 63%);
+}
+.feed-main .dummy-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  margin-left: 10%;
+}
+.feed-main .dummy-container .dummy-icon {
+  padding-left: 5rem;
+  color: hsl(249, 60%, 63%);
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+.feed-main .dummy-container .dummy-text {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.profile-content-container {
+  margin-top: 1rem;
+  border-radius: 15px;
+  background-color: hsl(30, 15%, 95%);
+}
+
+.profile-main, .notification-main {
+  width: 45%;
+}
+@media (max-width: 768px) {
+  .profile-main, .notification-main {
+    width: 60%;
+  }
+}
+.profile-main .profile-picture-section, .notification-main .profile-picture-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 15px 15px 0 0;
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.profile-main .profile-picture-text, .notification-main .profile-picture-text {
+  font-family: "Orienta", sans-serif;
+  color: #fff;
+  padding-left: 4rem;
+  padding-bottom: 3rem;
+}
+.profile-main .profile-about-container, .notification-main .profile-about-container,
+.profile-main .profile-connection-container,
+.notification-main .profile-connection-container {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 2rem;
+}
+.profile-main .profile-caption-container, .notification-main .profile-caption-container {
+  font-size: 1.8rem;
+  width: 80%;
+  line-height: 2rem;
+}
+.profile-main .profile-connection-text-container, .notification-main .profile-connection-text-container {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.profile-main .profile-connection-people, .notification-main .profile-connection-people {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #fff;
+}
+.profile-main .profile-connection-people img, .notification-main .profile-connection-people img {
+  width: 15%;
+  border-radius: 50%;
+  height: 8rem;
+}
+.profile-main .profile-connection-people p, .notification-main .profile-connection-people p {
+  width: 85%;
+  align-self: center;
+}
+
+.notification-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.notification-main .notification-welcome-text-container {
+  margin-bottom: 1.3rem;
+}
+.notification-main .notification-welcome-text-container h2 {
+  font-size: 3.2rem;
+  font-family: "Orienta", sans-serif;
+}
+.notification-main .notification-welcome-text-container span {
+  font-size: 2.8rem;
+  color: hsl(249, 60%, 63%);
+}
+.notification-main .notification-container {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  width: clamp(fit-content, 5vw, 65%);
+}
+.notification-main .notification-text-container {
+  padding: 2rem;
+  font-size: 1.8rem;
+}/*# sourceMappingURL=header.css.map */

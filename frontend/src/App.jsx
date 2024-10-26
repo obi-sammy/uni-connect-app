@@ -1,10 +1,11 @@
-import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import LandingPage from './pages/LandingPage'
 
 const App = () => {
   return (
-    <div>
-      <h1>UNI CONNECT APP</h1>
-    </div>
+    <Routes>
+      <Route path='/' element={<LandingPage />} />
+    </Routes>
   )
 }
 
