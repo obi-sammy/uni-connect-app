@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Orienta&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+$Primary: hsl(249, 60%, 63%);
+$accent-color: hsl(39, 100%, 75%);
+$Very-Pale-Cyan: hsl(193, 100%, 96%);
+$Gray: hsl(30, 15%, 95%);
+$logo-font-family: 'Orienta', sans-serif;
+
+$font-weights: (
+    'light': 300,
+    'regular': 400,
+    'bold': 700
+);
+
+$breakpoint: (
+    'sm': 440px,
+    'md': 768px,
+    'lg': 960px,
+    'xl': 1200px
+);
+
+@function breakpoints($bp) {
+    @return map-get($breakpoint , $bp)
+};
+
+@mixin breakpoint($bp) {
+    @media (max-width: breakpoints($bp)) {
+     @content
+    }
+}
+
+@function weights($weight-name) {
+    @return map-get($font-weights , $weight-name)
+};
+
+/* -- Mixin-- */
+@mixin transition {
+    transition: all 0.6s ease;
+}
+
+@mixin hover {
+    cursor: pointer;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4));
+}
+
+@mixin flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin inputField {
+    outline: none;
+
+    &:focus {
+        border: 2px solid $accent-color;
+    }
+}
+
+@mixin bigButton {
+    background-color: $Primary;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 2rem;
+
+    &:hover {
+        border: 2px solid $Primary;
+        color: $Primary;
+        background-color: #fff;
+    }
+}
+
+@mixin header {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: .7rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: weights(regular);
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 1.6rem);
+}
+
+// Alerts
+@mixin alert($color) {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    border: 1px solid $color;
+    color: $color;
+}
+
+.alert {
+    padding-block: 2rem; 
+    margin-bottom: 1rem;
+}
+
+.alert-danger {
+    @include alert(red);
+}
+
+.alert-danger {
+    @include alert($accent-color);
+}
