@@ -56,6 +56,7 @@ main {
 
 .login-section__form-container form {
     @include flex(column);
+    width: 75%;
     gap: 1rem;
 
     a {
@@ -65,14 +66,13 @@ main {
 
 .login-form-email-input,
 .login-form-password-input {
-    width: 75%;
+    width: 100%;
     padding: 1.2rem .8rem;
     
     @include inputField;
 }
 
 .sign-in-button {
-    width: 75%;
     padding: 1.3rem 0;
     
     @include bigButton;
