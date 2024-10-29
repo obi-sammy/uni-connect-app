@@ -50,9 +50,12 @@ $breakpoint: (
 
 @mixin inputField {
     outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
 
     &:focus {
-        border: 2px solid $accent-color;
+        border: 2px solid $Primary;
+        border-radius: 7px;
     }
 }
 

@@ -120,10 +120,13 @@ main {
   width: 75%;
   padding: 1.2rem 0.8rem;
   outline: none;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 .login-form-email-input:focus,
 .login-form-password-input:focus {
-  border: 2px solid hsl(39, 100%, 75%);
+  border: 2px solid hsl(249, 60%, 63%);
+  border-radius: 7px;
 }
 
 .sign-in-button {
