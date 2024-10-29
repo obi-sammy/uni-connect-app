@@ -117,7 +117,7 @@ body {
 @mixin alert($color) {
     display: grid;
     place-content: center;
-    width: 75%;
+    width: 100%;
     border: 1px solid $color;
     border-radius: 5px;
     color: $color;

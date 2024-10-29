@@ -42,7 +42,7 @@ body {
 .alert-danger {
   display: grid;
   place-content: center;
-  width: 75%;
+  width: 100%;
   border: 1px solid red;
   border-radius: 5px;
   color: red;
@@ -51,7 +51,7 @@ body {
 .alert-info {
   display: grid;
   place-content: center;
-  width: 75%;
+  width: 100%;
   border: 1px solid hsl(39, 100%, 75%);
   border-radius: 5px;
   color: hsl(39, 100%, 75%);
@@ -109,6 +109,7 @@ main {
 .login-section__form-container form {
   display: flex;
   flex-direction: column;
+  width: 75%;
   gap: 1rem;
 }
 .login-section__form-container form a {
@@ -117,7 +118,7 @@ main {
 
 .login-form-email-input,
 .login-form-password-input {
-  width: 75%;
+  width: 100%;
   padding: 1.2rem 0.8rem;
   outline: none;
   border: 1px solid black;
@@ -130,7 +131,6 @@ main {
 }
 
 .sign-in-button {
-  width: 75%;
   padding: 1.3rem 0;
   background-color: hsl(249, 60%, 63%);
   border-radius: 30px;
