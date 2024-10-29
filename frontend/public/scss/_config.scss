@@ -114,20 +114,21 @@ body {
 @mixin alert($color) {
     display: grid;
     place-content: center;
-    width: 100%;
+    width: 75%;
     border: 1px solid $color;
+    border-radius: 5px;
     color: $color;
 }
 
 .alert {
     padding-block: 2rem; 
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .alert-danger {
     @include alert(red);
 }
 
-.alert-danger {
+.alert-info {
     @include alert($accent-color);
 }

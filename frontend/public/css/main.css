@@ -36,50 +36,49 @@ body {
 
 .alert {
   padding-block: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .alert-danger {
   display: grid;
   place-content: center;
-  width: 100%;
+  width: 75%;
   border: 1px solid red;
+  border-radius: 5px;
   color: red;
 }
 
-.alert-danger {
+.alert-info {
   display: grid;
   place-content: center;
-  width: 100%;
+  width: 75%;
   border: 1px solid hsl(39, 100%, 75%);
+  border-radius: 5px;
   color: hsl(39, 100%, 75%);
 }
 
-.landing-page-header {
+header {
   width: 80%;
   margin: 0 auto;
   padding-top: 0.7rem;
 }
-
-.landing-page-header .landing-page-nav {
+header nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin: 2rem;
 }
-
-.landing-page-header .landing-page-nav .logo-container {
+header nav .logo-container {
   font-family: "Orienta", sans-serif;
 }
-
-.landing-page-header .landing-page-nav .button-container a {
+header nav .button-container a {
   padding: 1.5rem 3rem;
   border: 1.5px solid hsl(249, 60%, 63%);
   border-radius: 38px;
   color: hsl(249, 60%, 63%);
 }
-.landing-page-header .landing-page-nav .button-container a:hover {
+header nav .button-container a:hover {
   color: #fff;
   background-color: hsl(249, 60%, 63%);
 }
@@ -88,10 +87,6 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 5rem;
-}
-
-.landing-page-container {
-  background-color: #fff;
 }
 
 .login-section {
