@@ -95,9 +95,12 @@ header .logo-container {
   border-radius: 5px;
   border: 1px solid black;
   outline: none;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 .main-utility-class .form-container-utility-class .input-utility-class:focus {
-  border: 2px solid hsl(39, 100%, 75%);
+  border: 2px solid hsl(249, 60%, 63%);
+  border-radius: 7px;
 }
 .main-utility-class .form-container-utility-class .button-utility-class {
   width: 100%;
