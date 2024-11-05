@@ -235,7 +235,7 @@ nav .header-search-input:focus {
   border-radius: 26px;
 }
 .feed-main .feed-people-button-container button:hover {
-  border: 3px solid hsl(249, 60%, 63%);
+  border: 2px solid hsl(249, 60%, 63%);
 }
 .feed-main .dummy-container {
   display: flex;
@@ -306,7 +306,10 @@ nav .header-search-input:focus {
   flex-direction: row;
   gap: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+.profile-main .profile-connection-people:hover, .notification-main .profile-connection-people:hover {
+  border-bottom: 2px solid hsl(249, 60%, 63%);
 }
 .profile-main .profile-connection-people img, .notification-main .profile-connection-people img {
   width: 15%;
