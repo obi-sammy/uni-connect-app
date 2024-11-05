@@ -183,7 +183,7 @@ nav {
         border-radius: 26px;
 
         &:hover {
-            border: 3px solid $Primary;
+            border: 2px solid $Primary;
         }
     }
 
@@ -260,7 +260,11 @@ nav {
         @include flex(row);
         gap: 2rem;
         padding-bottom: 1rem;
-        border-bottom: 1px solid #fff;
+        border-bottom: 2px solid #fff;
+
+        &:hover {
+            border-bottom: 2px solid $Primary;
+        }
     }
 
     .profile-connection-people img {
