@@ -82,13 +82,13 @@ nav {
             height: 4rem;
             @include flex(row);
             align-items: center;
-            gap: 1.5rem;
+            gap: 1.3rem;
 
         }
 
         .profile-picture-container > img {
             height: 100%;
-            width: 21%;
+            width: 4rem;
             border-radius: 50%;
         }
 
