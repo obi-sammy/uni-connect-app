@@ -1,6 +1,6 @@
 const cloudinary = require("../middleware/cloudinary");
 const User = require("../models/User");
-const Social = require("../models/Socials");
+const Social = require("../models/Socials"); //not in use yet, Possible feature addition
 const Notification = require("../models/Notification");
 
 module.exports = {
@@ -11,8 +11,13 @@ module.exports = {
       const connectedUserIds = userDetails.connection;
       const connectionUserDetails = await User.find({ _id: { $in: connectedUserIds } });
 
-      console.log(userDetails)
-      res.render("profile.ejs", { userDetails: userDetails, loggedInUser: req.user, connectionUserDetails: connectionUserDetails, });
+      res.locals.currentRoute = req.path; // helps to access the currentRoute the user is on, in the ejs file you use currentRoute without needing to pass it in res.render
+      
+      res.render("profile.ejs", {
+         userDetails: userDetails, 
+         loggedInUser: req.user, 
+         connectionUserDetails: connectionUserDetails, 
+      });
     } catch (err) {
       console.log(err);
     }
@@ -64,7 +69,10 @@ module.exports = {
       const excludedUserIds = [loggedInUserId, ...req.user.connection];
 
       const feedUsers = await User.find({ _id: { $nin: excludedUserIds } });
-      res.render("feed.ejs", { feedUsers: feedUsers, loggedInUser: req.user });
+
+      res.locals.currentRoute = req.path; 
+
+      res.render("feed.ejs", { feedUsers: feedUsers, loggedInUser: req.user});
     } catch (err) {
       console.log(err);
     }
@@ -97,7 +105,8 @@ module.exports = {
       const personIdArray = notification.map(x => x.personId);
       const connectedUserDetails = await User.find({ _id: { $in: personIdArray } });
 
-      console.log(connectedUserDetails)
+      res.locals.currentRoute = req.path;
+
       res.render("notification.ejs", { notification: notification, loggedInUser: req.user, connectedUserDetails: connectedUserDetails });
     } catch (err) {
       console.log(err);

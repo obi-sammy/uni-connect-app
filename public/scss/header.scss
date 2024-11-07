@@ -1,18 +1,34 @@
 @import 'config';
 
 header {
-    background-color: $Primary;
-    color: #fff;
+    color: #000;
     padding-block: 1rem 1.5rem;
     position: fixed;
     top: 0;
     width: 100%;
+    height: 7.8rem;
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    z-index: 10;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    opacity: 0.3; /* Adjust for gloss level */
+    filter: blur(15px); /* Blurs everything under the header */
+    z-index: -1; /* Ensures overlay is behind content */
 }
 
 nav {
-    @include header;
     @include flex(row);
-
+    padding-top: .7rem;
+    padding-left: 3.8rem;
     align-items: center;
     justify-content: space-between;
 
@@ -24,20 +40,64 @@ nav {
     .header-icons-container {
         @include flex(row);
         align-items: center;
-        gap: 3.5rem;
+    }
+
+    .header-logo-container {
+        gap: 15rem;
     }
 
     .header-search-input {
-        width: 15rem;
-        border: none;
-        border-radius: 4px;
-        font-size: 1.4rem;
-        padding: 1rem 3rem .7rem 2rem;
+        width: 55rem;
+        border: 2px solid $Gray;
+        border-radius: 20px;
+        font-size: 1.3rem;
+        padding: 1rem 3rem;
         outline: none;
-        transition: width 0.4s ease-in-out;
 
         &:focus {
-            width: 20rem;
+            border: 2px solid $Primary;
+        }
+    }
+
+    .header-icons-container {
+        @include flex(row);
+        gap: 3rem;
+
+        .line {
+            border-left: 1.5px solid hsl(30, 2%, 79%);
+            height: 4.4rem;
+        }
+
+        .notification-container {
+            border: 2px solid $Gray;
+            padding: 1.1rem 1.2rem;
+            border-radius: 50%;
+
+            &:hover {
+                border: 2px solid $Primary;
+            }
+        }
+
+        .profile-picture-container {
+            height: 4rem;
+            @include flex(row);
+            align-items: center;
+            gap: 1.5rem;
+
+        }
+
+        .profile-picture-container > img {
+            height: 100%;
+            width: 21%;
+            border-radius: 50%;
+        }
+
+        .profile-picture-container > p {
+            font-size: 1.8rem;
+        }
+
+        @include breakpoint(md) {
+            display: none;
         }
     }
 }
@@ -52,18 +112,19 @@ nav {
 
 .dropdown-container {
     position: fixed;
-    top: 6.5rem;
+    top: 7.8rem;
     left: 0;
-    width: 23rem;
-    height: 100%;
-    overflow-x: hidden;
+    width: 25rem;
+    height: calc(100% - 4rem);
     z-index: 1;
-    background-color: $Gray;
+    background-color: #fff;
     color: black;
     font-family: $logo-font-family;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: auto; /* Allow scrolling within dropdown */
+    z-index: 1;
 
     @include breakpoint(md) {
         display: none;
@@ -91,16 +152,31 @@ nav {
 
 .dropdown-list {
     display: grid;
-    gap: 3rem;
-    font-size: 2.2rem;
-    
-    a:hover {
-        border-bottom: 2px solid $Primary;
-    }
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
 
     @include breakpoint(md) {
         gap: 3.5rem;
         font-size: 2.7rem;
+    }
+
+    .dropdown-item {
+        @include flex(row);
+        gap: 1rem;
+        align-items: center;
+        padding: 1.3rem 7rem 1.3rem 1.5rem;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
+    .dropdown-item-active {
+        background-color: #000;
+        color: #fff;
     }
 }
 
@@ -109,7 +185,7 @@ nav {
     background-color: $Primary;
     align-self: center;
     border-radius: 25px;
-    padding: 1rem 2.5rem;
+    padding: 1.2rem 4rem;
     @include transition;
 
     &:hover {
@@ -129,7 +205,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     margin-left: 35%;
-    margin-top: 8rem;
+    margin-top: 10.5rem;
     margin-bottom: 5rem;
 
     @include breakpoint(md) {
@@ -137,14 +213,18 @@ nav {
     }
 }
 
-.feed-main {
+.feed-main {   
+    display: flex;
+    gap: 1.5rem;
+
     .feed-people-container {
+        border-radius: 20px;
+        background-color: #fff;
         display: grid;
-        grid-template-columns: 25% 75%;
+        grid-template-columns: 27% 75%;
         gap: 3rem;
         max-width: 70%;
-        border-bottom: 2px solid $Gray;
-        padding: 2.5rem 3rem 2rem 0;
+        padding: 2.9rem 4.5rem;
     }
 
     .feed-people-image-container img{
@@ -156,7 +236,8 @@ nav {
     .feed-people-text-container {
         @include flex(row);
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
+        margin-right: 4.3rem;
     }
 
     .feed-people-text p {
@@ -210,7 +291,7 @@ nav {
 .profile-content-container {
     margin-top: 1rem;
     border-radius: 15px;
-    background-color: $Gray;
+    background-color: #fff;
 }
 
 .profile-main {
@@ -260,7 +341,7 @@ nav {
         @include flex(row);
         gap: 2rem;
         padding-bottom: 1rem;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid $Gray;
 
         &:hover {
             border-bottom: 2px solid $Primary;

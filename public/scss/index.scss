@@ -1,7 +1,13 @@
 @import 'config';
 
+body {
+    background-color: #fff;
+}
+
 header {
-    @include header;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: .7rem;
 
     nav {
         @include flex(row);
@@ -15,7 +21,7 @@ header {
         }
 
         .button-container a {
-            padding: 1.5rem 3rem;
+            padding: 1.3rem 4rem;
             border: 1.5px solid $Primary;
             border-radius: 38px;
             color: $Primary;
@@ -28,16 +34,17 @@ header {
     }
 }
 
-main {
+.index-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 5rem;
+    margin-top: 5rem; //change this to clamp because it has issues at 1440px
 }
 
 .login-section {
     @include flex(column);
-    margin-left: 23%;
+    margin-left: 18%;
     gap: 4rem;
+    margin-top: 2.5rem;
 
     #{&}__text-container {
         h2 {
