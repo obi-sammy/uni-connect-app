@@ -1,15 +1,15 @@
 @import 'config';
 
-body {
+.index-body {
     background-color: #fff;
 }
 
-header {
+.index-header {
     width: 85%;
     margin: 0 auto;
     padding-top: .7rem;
 
-    nav {
+    .index-nav {
         @include flex(row);
         
         align-items: center;

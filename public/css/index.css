@@ -58,32 +58,32 @@ body {
   color: hsl(39, 100%, 75%);
 }
 
-body {
+.index-body {
   background-color: #fff;
 }
 
-header {
+.index-header {
   width: 85%;
   margin: 0 auto;
   padding-top: 0.7rem;
 }
-header nav {
+.index-header .index-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   margin: 2rem;
 }
-header nav .logo-container {
+.index-header .index-nav .logo-container {
   font-family: "Orienta", sans-serif;
 }
-header nav .button-container a {
+.index-header .index-nav .button-container a {
   padding: 1.3rem 4rem;
   border: 1.5px solid hsl(249, 60%, 63%);
   border-radius: 38px;
   color: hsl(249, 60%, 63%);
 }
-header nav .button-container a:hover {
+.index-header .index-nav .button-container a:hover {
   color: #fff;
   background-color: hsl(249, 60%, 63%);
 }
