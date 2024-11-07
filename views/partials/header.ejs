@@ -20,31 +20,57 @@
                 <h2 class="header-logo">uni-connect</h2>
 
                 <form action="/feed/search?_method=GET" method="POST">
-                    <input type="text" name="search" class="header-search-input" placeholder="Search">
+                    <input type="text" name="search" class="header-search-input" placeholder="Search for students...">
                 </form>
+
+                <div class="header-icons-container">
+                    <div class="notification-container">
+                        <a href="/notification">
+                            <i class="fa fa-bell"></i>
+                        </a>
+                    </div>
+
+                    <div class="line"></div>
+        
+                    <div class="profile-picture-container">
+                        <img src="<%= loggedInUser.profilePicture %>" alt="User's profile Picture">
+                        <p><%= loggedInUser.lastName %> <%= loggedInUser.firstName %></p>
+                    </div>
+                </div>
             </div>
     
             <div class="dropdown-container" id="dropdownContainer">
                 <div class="dropdown-flex-container">
                     <ul class="dropdown-list">
-                        <li><a href="/feed">FEED</a></li>
-                        <li><a href="/profile/<%= loggedInUser.id %>">PROFILE</a></li>
-                        <li><a href="/notification">NOTIFICATION</a></li>
+                        <li>
+                            <a href="/feed">
+                                <div class="<%= currentRoute === '/feed' ? 'dropdown-item dropdown-item-active' : 'dropdown-item' %>">
+                                    <i class="fa fa-newspaper feed-icon"></i>
+                                    <span>Feed</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/profile/<%= loggedInUser.id %>">
+                                <div class="<%= currentRoute === `/profile/${loggedInUser.id}` ? 'dropdown-item dropdown-item-active' : 'dropdown-item' %>">
+                                    <i class="fa fa-user profile-icon"></i>
+                                    <span>Profile</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/notification">
+                                <div class="<%= currentRoute === '/notification' ? 'dropdown-item dropdown-item-active' : 'dropdown-item' %>">
+                                    <i class="fa fa-bell notification-icon"></i>
+                                    <span>Notification</span>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
 
-                    <a href="/logout" class="dropdown-logout-button">Log out</a>
+                    <a href="/logout" class="dropdown-logout-button">Logout</a>
                 </div>
             </div>
-    
-            <!-- <div class="header-icons-container">
-                <div class="notification-container">
-                    <i class="fa-regular fa-bell"></i>
-                </div>
-    
-                <div class="profile-picture-container">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-            </div> -->
         </nav>
     </header>
 
