@@ -2,7 +2,7 @@
 
 Uni-connect is a full-stack web application designed to connect students with each other. It provides a platform for students to connect based on their interests, courses, and other relevant factors, fostering collaboration and networking within the student community.
 
-[Link to Uni-connect](uni-connect-app.vercel.app)
+[Link to Uni-connect](https://uni-connect-app.vercel.app/)
 
 
 ## Features
@@ -31,7 +31,7 @@ Uni-connect is a full-stack web application designed to connect students with ea
 
 ## Usage
 
-- Visit the deployed app at [Link to Uni-connect](uni-connect-app.vercel.app)
+- Visit the deployed app at [Link to Uni-connect](https://uni-connect-app.vercel.app/)
 - Register a new account or log in with existing credentials.
 - Create and customize your profile.
 - Search for other students and connect with them.
