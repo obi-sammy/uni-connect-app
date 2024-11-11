@@ -26,6 +26,9 @@ app.set("view engine", "ejs");
 //Static Folder
 app.use(express.static(path.join(__dirname, "public")));
 
+// Gives the hosting service access to the views directory
+app.set('views', path.join(__dirname, 'views'))
+
 //Body Parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
