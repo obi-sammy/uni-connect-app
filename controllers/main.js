@@ -1,11 +1,10 @@
 const cloudinary = require("../middleware/cloudinary");
 const User = require("../models/User");
-const Social = require("../models/Socials"); //not in use yet, Possible feature addition
+const Social = require("../models/Socials"); // not in use yet, Possible feature addition
 const Notification = require("../models/Notification");
 
 module.exports = {
   getProfile: async (req, res) => { 
-    console.log(req.user)
     try {
       const userDetails = await User.findById(req.params.id);
       const connectedUserIds = userDetails.connection;
@@ -85,7 +84,7 @@ module.exports = {
         (error, updatedDocument) => {if (error) {
           console.error(error);
           } else {
-              console.log('Document updated:', updatedDocument);
+               console.log('Document updated:', updatedDocument);
           }
       });
       
