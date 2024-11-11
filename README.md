@@ -2,7 +2,7 @@
 
 Uni-connect is a full-stack web application designed to connect students with each other. It provides a platform for students to connect based on their interests, courses, and other relevant factors, fostering collaboration and networking within the student community.
 
-[Link to Uni-connect](https://dull-jade-clam-sock.cyclic.app)
+[Link to Uni-connect](uni-connect-app.vercel.app)
 
 
 ## Features
@@ -15,11 +15,11 @@ Uni-connect is a full-stack web application designed to connect students with ea
 
 ## Technologies Used
 
-- **Front-end:** EJS, SCSS, JavaScript
+- **Front-end:** EJS, SCSS and we are currently integrating React.js
 - **Back-end:** Node.js, Express.js
 - **Database:** MongoDB, Mongoose
 - **Authentication:** Passport
-- **Deployment:** Heroku, Cloudinary for storing images
+- **Deployment:** Vercel, Cloudinary for storing images
 
 ## Installation
 
@@ -31,7 +31,7 @@ Uni-connect is a full-stack web application designed to connect students with ea
 
 ## Usage
 
-- Visit the deployed app at [Link to Uni-connect](https://dull-jade-clam-sock.cyclic.app)
+- Visit the deployed app at [Link to Uni-connect](uni-connect-app.vercel.app)
 - Register a new account or log in with existing credentials.
 - Create and customize your profile.
 - Search for other students and connect with them.
@@ -40,16 +40,16 @@ Uni-connect is a full-stack web application designed to connect students with ea
 
 While Uni-connect provides valuable features for connecting students, there are several areas where the application could be improved:
 
-- [ ] Change server hosting service from Cyclic to another hosting service
+- [x] Change server hosting service from Cyclic to another hosting service
 - [ ] Make app responsive on all screen sizes.
 - [ ] Make the search field functional.
 - [ ] Add googleAuth and make the forgort password functional.
 - [x] Protect the '/' route from users already logged in.
 - [ ] Handle the frontend using React.
 - [ ] Refactor code.
-- [ ] Add comments where necessary.
+- [x] Add comments where necessary.
 - [ ] Add the user's social media accounts in his/her profile so other users can connect with them.
-- [ ] Make it possible to delete notifications and add the date to the notification.
+- [ ] Make it possible for user's to edit their profile.
 - [ ] Add a feature where user can accept and reject connections.
 ## Contributing
 
