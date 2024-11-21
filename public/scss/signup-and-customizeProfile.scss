@@ -17,30 +17,56 @@
 .customizeprofile-nav {
     width: 85%;
     margin: 0 auto;
-    padding-top: 1.6rem;
+    padding-top: 2.6rem;
+
+    @include breakpoint(md) {
+        width: 95%;
+    }
 }
 
 .signup-header {
     .logo-container {
         font-family: $logo-font-family;
+
+        @include breakpoint(md) {
+            font-size: 1.3rem;
+        }
     }
 }
 
 .main-utility-class {
     display: grid;
     place-items: center;
+    align-items: center;
+    justify-items: center;
     gap: 2.5rem;
-    margin-top: 7.7rem;
+    margin-top: 8rem;
     margin-bottom: 7rem;
 
-    .text-container-utility-class h2 {
-        font-weight: weights(regular);
+    .text-container-utility-class {
+        @include breakpoint(sm) {
+            max-width: 85%;
+            text-align: center;
+        }
+
+        h2 {
+           font-weight: weights(regular);
+
+            @include breakpoint(xl) {
+                font-size: clamp(2.2rem, 3vw, 2.6rem);
+            } 
+        }
     }
 
     .form-container-utility-class {
         background-color: #fff;
         border-radius: 10px;
         padding: 3rem;
+
+        @include breakpoint(sm) {
+            padding: 2rem;
+            margin-inline: 2rem;
+        }
 
         form {
             @include flex(column);
