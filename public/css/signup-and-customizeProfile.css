@@ -111,11 +111,6 @@ body {
 .main-utility-class .text-container-utility-class h2 {
   font-weight: 400;
 }
-@media (max-width: 1440px) {
-  .main-utility-class .text-container-utility-class h2 {
-    font-size: clamp(2.2rem, 3vw, 2.6rem);
-  }
-}
 .main-utility-class .form-container-utility-class {
   background-color: #fff;
   border-radius: 10px;
@@ -124,7 +119,7 @@ body {
 @media (max-width: 440px) {
   .main-utility-class .form-container-utility-class {
     padding: 2rem;
-    margin-inline: 2rem;
+    margin-inline: 2.7rem;
   }
 }
 .main-utility-class .form-container-utility-class form {
@@ -164,12 +159,18 @@ body {
   margin-top: 0.4rem;
 }
 
+@media (max-width: 1440px) {
+  .signup-text-container h2 {
+    font-size: clamp(2.2rem, 3vw, 2.6rem);
+  }
+}
+
 .customizeprofile-main .customizeprofile-container {
   margin-bottom: 4rem;
 }
 .customizeprofile-main .customizeprofile-text-container h2 {
   font-weight: 700;
-  font-size: 3.7rem;
+  font-size: clamp(3.3rem, 4vw, 3.7rem);
 }
 .customizeprofile-main .customizeprofile-text-container span {
   font-family: "Orienta", sans-serif;
