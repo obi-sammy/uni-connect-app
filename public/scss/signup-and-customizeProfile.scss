@@ -51,10 +51,6 @@
 
         h2 {
            font-weight: weights(regular);
-
-            @include breakpoint(xl) {
-                font-size: clamp(2.2rem, 3vw, 2.6rem);
-            } 
         }
     }
 
@@ -65,7 +61,7 @@
 
         @include breakpoint(sm) {
             padding: 2rem;
-            margin-inline: 2rem;
+            margin-inline: 2.7rem;
         }
 
         form {
@@ -98,6 +94,14 @@
     }
 }
 
+.signup-text-container {
+    h2 {
+         @include breakpoint(xl) {
+             font-size: clamp(2.2rem, 3vw, 2.6rem);
+         } 
+     }
+}
+
 .customizeprofile-main {
     .customizeprofile-container {
         margin-bottom: 4rem;
@@ -105,7 +109,7 @@
 
     .customizeprofile-text-container h2 {
         font-weight: weights(bold);
-        font-size: 3.7rem;
+        font-size: clamp(3.3rem, 4vw, 3.7rem);
     }
 
     .customizeprofile-text-container span {
