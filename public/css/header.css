@@ -259,9 +259,20 @@ nav .header-icons-container .profile-picture-container > p {
   margin-top: 10.5rem;
   margin-bottom: 5rem;
 }
+@media (max-width: 1024px) {
+  .layout-for-feed-and-profile {
+    margin-left: 33%;
+    margin-top: 11.5rem;
+  }
+}
 @media (max-width: 768px) {
   .layout-for-feed-and-profile {
     margin-left: 20%;
+  }
+}
+@media (max-width: 440px) {
+  .layout-for-feed-and-profile {
+    margin-left: 10%;
   }
 }
 
@@ -401,21 +412,31 @@ nav .header-icons-container .profile-picture-container > p {
   flex-direction: column;
   gap: 1rem;
 }
+@media (max-width: 1024px) {
+  .notification-main {
+    width: 60%;
+  }
+}
+@media (max-width: 440px) {
+  .notification-main {
+    width: 80%;
+  }
+}
 .notification-main .notification-welcome-text-container {
   margin-bottom: 1.3rem;
 }
 .notification-main .notification-welcome-text-container h2 {
-  font-size: 3.2rem;
+  font-size: clamp(2.7rem, 3.5vw, 3.2rem);
   font-family: "Orienta", sans-serif;
 }
 .notification-main .notification-welcome-text-container span {
-  font-size: 2.8rem;
+  font-size: clamp(2.7rem, 3.5vw, 3.2rem);
   color: hsl(249, 60%, 63%);
 }
 .notification-main .notification-container {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.16);
   border-radius: 10px;
-  width: clamp(fit-content, 5vw, 65%);
+  width: 100%;
 }
 .notification-main .notification-text-container {
   padding: 2rem;

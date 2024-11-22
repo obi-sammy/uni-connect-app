@@ -208,8 +208,17 @@ nav {
     margin-top: 10.5rem;
     margin-bottom: 5rem;
 
+    @include breakpoint(lg) {
+        margin-left: 33%;
+        margin-top: 11.5rem;
+    }
+
     @include breakpoint(md) {
         margin-left: 20%;
+    }
+
+    @include breakpoint(sm) {
+        margin-left: 10%;
     }
 }
 
@@ -366,25 +375,33 @@ nav {
     @include flex(column);
 
     gap: 1rem;
+    
+    @include breakpoint(lg) {
+        width: 60%;
+    }
+
+    @include breakpoint(sm) {
+        width: 80%;
+    }
 
     .notification-welcome-text-container {
         margin-bottom: 1.3rem;
     }
 
     .notification-welcome-text-container h2 {
-        font-size: 3.2rem;
+        font-size: clamp(2.7rem, 3.5vw, 3.2rem);
         font-family: $logo-font-family;
     }
 
     .notification-welcome-text-container span {
-        font-size: 2.8rem;
+        font-size: clamp(2.7rem, 3.5vw, 3.2rem);
         color: $Primary;
     }
 
     .notification-container {
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.16);
         border-radius: 10px;
-        width: clamp(fit-content, 5vw, 65%);
+        width: 100%;
     }
 
     .notification-text-container {
