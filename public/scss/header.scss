@@ -209,7 +209,7 @@ nav {
     margin-bottom: 5rem;
 
     @include breakpoint(lg) {
-        margin-left: 33%;
+        margin-left: 40%;
         margin-top: 11.5rem;
     }
 
@@ -310,6 +310,14 @@ nav {
         width: 60%;
     }
 
+    @include breakpoint(sm) {
+        width: 81%;
+    }
+
+    @media screen and (max-width: 910px) and (min-width: 769px) {
+        margin-left: 43%;
+    }
+
     .profile-picture-section {
         @include flex(column);
         justify-content: end;
@@ -324,8 +332,12 @@ nav {
     .profile-picture-text {
         font-family: $logo-font-family;
         color: #fff;
-        padding-left: 4rem;
-        padding-bottom: 3rem;
+        padding-left: 3rem;
+        padding-bottom: 2rem;
+
+        h2 {
+            font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+        }
     }
 
     .profile-about-container,
@@ -337,13 +349,16 @@ nav {
 
     .profile-caption-container {
         font-size: 1.8rem;
-        width: 80%;
         line-height: 2rem;
     }
 
     .profile-connection-text-container {
         text-align: center;
-        font-size: 1.8rem;
+
+        h3 {
+            font-size: clamp(1.7rem, 2vw, 2rem);
+        }
+        
     }
 
     .profile-connection-people {
@@ -355,29 +370,49 @@ nav {
         &:hover {
             border-bottom: 2px solid $Primary;
         }
+
+        @include breakpoint(md) {
+            gap: 1.5rem;
+        }
     }
 
     .profile-connection-people img {
-        width: 15%;
-        border-radius: 50%;
+        width: 8rem; 
         height: 8rem;
+        border-radius: 50%;
+        object-fit: cover; /* Ensure the image fits within the circular container */
+
+        @include breakpoint(lg) {
+            width: 6rem;
+            height: 6rem;
+        }
+        
+        @include breakpoint(md) {
+            width: 5rem;
+            height: 5rem;
+        }
+        
     }
 
     .profile-connection-people p {
-        width: 85%;
         align-self: center;
+        font-size: clamp(1.6rem, 2vw, 1.8rem);
     }
 }
 
 //Notification
 .notification-main {
-    @extend .profile-main;
     @include flex(column);
+    width: 45%;
 
     gap: 1rem;
-    
+
     @include breakpoint(lg) {
-        width: 60%;
+        width: 48%;
+    }
+    
+    @include breakpoint(md) {
+        width: 62%;
     }
 
     @include breakpoint(sm) {

@@ -261,7 +261,7 @@ nav .header-icons-container .profile-picture-container > p {
 }
 @media (max-width: 1024px) {
   .layout-for-feed-and-profile {
-    margin-left: 33%;
+    margin-left: 40%;
     margin-top: 11.5rem;
   }
 }
@@ -346,15 +346,25 @@ nav .header-icons-container .profile-picture-container > p {
   background-color: #fff;
 }
 
-.profile-main, .notification-main {
+.profile-main {
   width: 45%;
 }
 @media (max-width: 768px) {
-  .profile-main, .notification-main {
+  .profile-main {
     width: 60%;
   }
 }
-.profile-main .profile-picture-section, .notification-main .profile-picture-section {
+@media (max-width: 440px) {
+  .profile-main {
+    width: 81%;
+  }
+}
+@media screen and (max-width: 910px) and (min-width: 769px) {
+  .profile-main {
+    margin-left: 43%;
+  }
+}
+.profile-main .profile-picture-section {
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -364,57 +374,84 @@ nav .header-icons-container .profile-picture-container > p {
   background-size: cover;
   background-position: center;
 }
-.profile-main .profile-picture-text, .notification-main .profile-picture-text {
+.profile-main .profile-picture-text {
   font-family: "Orienta", sans-serif;
   color: #fff;
-  padding-left: 4rem;
-  padding-bottom: 3rem;
+  padding-left: 3rem;
+  padding-bottom: 2rem;
 }
-.profile-main .profile-about-container, .notification-main .profile-about-container,
-.profile-main .profile-connection-container,
-.notification-main .profile-connection-container {
+.profile-main .profile-picture-text h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+}
+.profile-main .profile-about-container,
+.profile-main .profile-connection-container {
   display: flex;
   flex-direction: column;
   padding: 3rem;
   gap: 2rem;
 }
-.profile-main .profile-caption-container, .notification-main .profile-caption-container {
+.profile-main .profile-caption-container {
   font-size: 1.8rem;
-  width: 80%;
   line-height: 2rem;
 }
-.profile-main .profile-connection-text-container, .notification-main .profile-connection-text-container {
+.profile-main .profile-connection-text-container {
   text-align: center;
-  font-size: 1.8rem;
 }
-.profile-main .profile-connection-people, .notification-main .profile-connection-people {
+.profile-main .profile-connection-text-container h3 {
+  font-size: clamp(1.7rem, 2vw, 2rem);
+}
+.profile-main .profile-connection-people {
   display: flex;
   flex-direction: row;
   gap: 2rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid hsl(30, 15%, 95%);
 }
-.profile-main .profile-connection-people:hover, .notification-main .profile-connection-people:hover {
+.profile-main .profile-connection-people:hover {
   border-bottom: 2px solid hsl(249, 60%, 63%);
 }
-.profile-main .profile-connection-people img, .notification-main .profile-connection-people img {
-  width: 15%;
-  border-radius: 50%;
-  height: 8rem;
+@media (max-width: 768px) {
+  .profile-main .profile-connection-people {
+    gap: 1.5rem;
+  }
 }
-.profile-main .profile-connection-people p, .notification-main .profile-connection-people p {
-  width: 85%;
+.profile-main .profile-connection-people img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover; /* Ensure the image fits within the circular container */
+}
+@media (max-width: 1024px) {
+  .profile-main .profile-connection-people img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  .profile-main .profile-connection-people img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.profile-main .profile-connection-people p {
   align-self: center;
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
 
 .notification-main {
   display: flex;
   flex-direction: column;
+  width: 45%;
   gap: 1rem;
 }
 @media (max-width: 1024px) {
   .notification-main {
-    width: 60%;
+    width: 48%;
+  }
+}
+@media (max-width: 768px) {
+  .notification-main {
+    width: 62%;
   }
 }
 @media (max-width: 440px) {
