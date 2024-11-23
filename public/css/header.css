@@ -278,34 +278,79 @@ nav .header-icons-container .profile-picture-container > p {
 
 .feed-main {
   display: flex;
+  max-width: 50%;
   gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .feed-main {
+    margin-left: 11%;
+    max-width: 80%;
+  }
 }
 .feed-main .feed-people-container {
   border-radius: 20px;
   background-color: #fff;
   display: grid;
-  grid-template-columns: 27% 75%;
-  gap: 3rem;
-  max-width: 70%;
-  padding: 2.9rem 4.5rem;
+  grid-template-columns: 30% 67%;
+  padding: 2.9rem 4rem;
+}
+@media screen and (max-width: 1300px) and (min-width: 556px) {
+  .feed-main .feed-people-container {
+    gap: 2rem;
+    padding: 2.9rem 3rem;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 700px) {
+  .feed-main .feed-people-container {
+    gap: 0;
+  }
+}
+@media screen and (max-width: 556px) {
+  .feed-main .feed-people-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 .feed-main .feed-people-image-container img {
   border-radius: 50%;
-  width: 100%;
+  width: 15rem;
   height: 15rem;
+  object-fit: cover; /* Ensures image scales properly */
+}
+@media screen and (max-width: 1100px) and (min-width: 556px) {
+  .feed-main .feed-people-image-container img {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@media screen and (max-width: 875px) and (min-width: 769px) {
+  .feed-main .feed-people-image-container img {
+    width: 11rem;
+    height: 11rem;
+  }
 }
 .feed-main .feed-people-text-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-right: 4.3rem;
+}
+@media screen and (max-width: 556px) {
+  .feed-main .feed-people-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 .feed-main .feed-people-text p {
   padding-top: 0.7rem;
 }
 .feed-main .feed-people-name {
   font-family: "Orienta", sans-serif;
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
 }
 .feed-main .feed-people-department {
   color: hsl(249, 60%, 63%);
@@ -313,6 +358,16 @@ nav .header-icons-container .profile-picture-container > p {
 .feed-main .feed-people-button-container {
   align-self: flex-start;
   padding-top: 2.8rem;
+}
+@media screen and (max-width: 1100px) and (min-width: 556px) {
+  .feed-main .feed-people-button-container {
+    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 556px) {
+  .feed-main .feed-people-button-container {
+    align-self: center;
+  }
 }
 .feed-main .feed-people-button-container button {
   padding: 1rem 3rem;
@@ -322,6 +377,11 @@ nav .header-icons-container .profile-picture-container > p {
 }
 .feed-main .feed-people-button-container button:hover {
   border: 2px solid hsl(249, 60%, 63%);
+}
+@media screen and (max-width: 977px) and (min-width: 769px) {
+  .feed-main .feed-people-button-container button {
+    padding: 1rem 2rem;
+  }
 }
 .feed-main .dummy-container {
   display: flex;
