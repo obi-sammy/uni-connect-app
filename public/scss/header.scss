@@ -224,29 +224,64 @@ nav {
 
 .feed-main {   
     display: flex;
+    max-width: 50%;
     gap: 1.5rem;
+
+    @include breakpoint(md) {
+        margin-left: 11%;
+        max-width: 80%;
+    }
 
     .feed-people-container {
         border-radius: 20px;
         background-color: #fff;
         display: grid;
-        grid-template-columns: 27% 75%;
-        gap: 3rem;
-        max-width: 70%;
-        padding: 2.9rem 4.5rem;
+        grid-template-columns: 30% 67%;
+        padding: 2.9rem 4rem;
+
+        @media screen and (max-width: 1300px) and (min-width: 556px) {
+            gap: 2rem;
+            padding: 2.9rem 3rem;
+        }
+
+        @media screen and (max-width: 768px) and (min-width: 700px) {
+            gap: 0;
+        }
+
+        @media screen and (max-width: 556px) {
+            @include flex(column);
+            align-items: center;
+            gap: 2rem;
+        }
     }
 
     .feed-people-image-container img{
         border-radius: 50%;
-        width: 100%;
+        width: 15rem;
         height: 15rem;
+        object-fit: cover; /* Ensures image scales properly */
+
+        @media screen and (max-width: 1100px) and (min-width: 556px) {
+            width: 12rem;
+            height: 12rem;
+        }
+
+        @media screen and (max-width: 875px) and (min-width: 769px) {
+            width: 11rem;
+            height: 11rem;
+        }
     }
 
     .feed-people-text-container {
         @include flex(row);
         justify-content: space-between;
         align-items: center;
-        margin-right: 4.3rem;
+
+        @media screen and (max-width: 556px) {
+            @include flex(column);
+            align-items: center;
+            text-align: center;
+        }
     }
 
     .feed-people-text p {
@@ -255,6 +290,7 @@ nav {
 
     .feed-people-name {
         font-family: $logo-font-family;
+        font-size: clamp(1.8rem, 2vw, 2.4rem);
     }
 
     .feed-people-department {
@@ -264,6 +300,14 @@ nav {
     .feed-people-button-container {
         align-self: flex-start;
         padding-top: 2.8rem;
+
+        @media screen and (max-width: 1100px) and (min-width: 556px) {
+            padding-top: 1rem;
+        }
+
+        @media screen and (max-width: 556px) {
+            align-self: center;
+        }
     }
 
     .feed-people-button-container button {
@@ -274,6 +318,10 @@ nav {
 
         &:hover {
             border: 2px solid $Primary;
+        }
+
+        @media screen and (max-width: 977px) and (min-width: 769px) {
+            padding: 1rem 2rem;
         }
     }
 
