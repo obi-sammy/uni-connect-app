@@ -46,19 +46,6 @@ nav {
         gap: 15rem;
     }
 
-    .header-search-input {
-        width: 55rem;
-        border: 2px solid $Gray;
-        border-radius: 20px;
-        font-size: 1.3rem;
-        padding: 1rem 3rem;
-        outline: none;
-
-        &:focus {
-            border: 2px solid $Primary;
-        }
-    }
-
     .header-icons-container {
         @include flex(row);
         gap: 3rem;
