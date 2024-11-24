@@ -10,6 +10,10 @@ header {
     background: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
     z-index: 10;
+    
+    @include flex(row);
+    align-items: center;
+    justify-content: center;
 }
 
 header::before {
@@ -27,13 +31,12 @@ header::before {
 
 nav {
     @include flex(row);
-    padding-top: .7rem;
-    padding-left: 3.8rem;
-    align-items: center;
-    justify-content: space-between;
+    padding: .7rem 2rem .7rem 6rem;
+    width: 100%;
 
-    .header-logo {
-        font-family: $logo-font-family;
+    @include breakpoint(md) {
+        margin-top: 1rem;
+        padding: .7rem 2rem;
     }
 
     .header-logo-container,
@@ -43,21 +46,25 @@ nav {
     }
 
     .header-logo-container {
-        gap: 15rem;
-    }
+        width: 100%;
+        justify-content: space-between;
 
-    .header-search-input {
-        width: 55rem;
-        border: 2px solid $Gray;
-        border-radius: 20px;
-        font-size: 1.3rem;
-        padding: 1rem 3rem;
-        outline: none;
+        @include breakpoint(md) {
+            justify-content: flex-start; /* Reset alignment */
+            position: relative; /* Allow adjustments */
 
-        &:focus {
-            border: 2px solid $Primary;
+            .header-logo {
+                position: absolute;
+                left: 50%; /* Center the logo */
+                transform: translateX(-50%); /* Correct centering */
+            }
         }
     }
+
+    .header-logo-text {
+        font-family: $logo-font-family;
+        font-size: 2.1rem;
+    }    
 
     .header-icons-container {
         @include flex(row);
@@ -159,18 +166,32 @@ nav {
     @include breakpoint(md) {
         gap: 3.5rem;
         font-size: 2.7rem;
+        justify-content: center;
     }
 
     .dropdown-item {
-        @include flex(row);
-        gap: 1rem;
+        display: flex;
         align-items: center;
-        padding: 1.3rem 7rem 1.3rem 1.5rem;
-        border-radius: 10px;
+        justify-content: flex-start;
+        width: 100%;
+        height: 4.7rem;
+        gap: 1.7rem;
+        padding: 0 8rem 0 2rem;
+        border-radius: 8px;
 
         &:hover {
             background-color: #000;
             color: #fff;
+        }
+
+        @include breakpoint(md) {
+            justify-content: center;
+            height: 6rem;
+            padding: 0 6rem;
+
+            i {
+                display: none;
+            }
         }
     }
 
