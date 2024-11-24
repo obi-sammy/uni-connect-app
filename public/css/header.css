@@ -103,17 +103,6 @@ nav .header-icons-container {
 nav .header-logo-container {
   gap: 15rem;
 }
-nav .header-search-input {
-  width: 55rem;
-  border: 2px solid hsl(30, 15%, 95%);
-  border-radius: 20px;
-  font-size: 1.3rem;
-  padding: 1rem 3rem;
-  outline: none;
-}
-nav .header-search-input:focus {
-  border: 2px solid hsl(249, 60%, 63%);
-}
 nav .header-icons-container {
   display: flex;
   flex-direction: row;
