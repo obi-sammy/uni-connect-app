@@ -41,7 +41,7 @@ Uni-connect is a full-stack web application designed to connect students with ea
 While Uni-connect provides valuable features for connecting students, there are several areas where the application could be improved:
 
 - [x] Change server hosting service from Cyclic to another hosting service
-- [ ] Make app responsive on all screen sizes.
+- [x] Make app responsive on all screen sizes.
 - [ ] Make the search field functional.
 - [ ] Add googleAuth and make the forgort password functional.
 - [x] Protect the '/' route from users already logged in.
