@@ -68,6 +68,10 @@ header {
   background: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
   z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 header::before {
@@ -86,13 +90,14 @@ header::before {
 nav {
   display: flex;
   flex-direction: row;
-  padding-top: 0.7rem;
-  padding-left: 3.8rem;
-  align-items: center;
-  justify-content: space-between;
+  padding: 0.7rem 2rem 0.7rem 6rem;
+  width: 100%;
 }
-nav .header-logo {
-  font-family: "Orienta", sans-serif;
+@media (max-width: 768px) {
+  nav {
+    margin-top: 1rem;
+    padding: 0.7rem 2rem;
+  }
 }
 nav .header-logo-container,
 nav .header-icons-container {
@@ -101,7 +106,23 @@ nav .header-icons-container {
   align-items: center;
 }
 nav .header-logo-container {
-  gap: 15rem;
+  width: 100%;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  nav .header-logo-container {
+    justify-content: flex-start; /* Reset alignment */
+    position: relative; /* Allow adjustments */
+  }
+  nav .header-logo-container .header-logo {
+    position: absolute;
+    left: 50%; /* Center the logo */
+    transform: translateX(-50%); /* Correct centering */
+  }
+}
+nav .header-logo-text {
+  font-family: "Orienta", sans-serif;
+  font-size: 2.1rem;
 }
 nav .header-icons-container {
   display: flex;
@@ -202,19 +223,32 @@ nav .header-icons-container .profile-picture-container > p {
   .dropdown-list {
     gap: 3.5rem;
     font-size: 2.7rem;
+    justify-content: center;
   }
 }
 .dropdown-list .dropdown-item {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
   align-items: center;
-  padding: 1.3rem 7rem 1.3rem 1.5rem;
-  border-radius: 10px;
+  justify-content: flex-start;
+  width: 100%;
+  height: 4.7rem;
+  gap: 1.7rem;
+  padding: 0 8rem 0 2rem;
+  border-radius: 8px;
 }
 .dropdown-list .dropdown-item:hover {
   background-color: #000;
   color: #fff;
+}
+@media (max-width: 768px) {
+  .dropdown-list .dropdown-item {
+    justify-content: center;
+    height: 6rem;
+    padding: 0 6rem;
+  }
+  .dropdown-list .dropdown-item i {
+    display: none;
+  }
 }
 .dropdown-list .dropdown-item-active {
   background-color: #000;
